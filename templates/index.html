@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Hello Welcome to the wordbot!! Type any of the following commands:</p>
+<p>/hello<br>/bye<br>/meaning [word]<br>/synonym [word]<br>/antonym [word] <br><p>
+<p>Lets give t a try<br>Serendipity<br>the occurrence and development of events by chance in a happy or beneficial way<p>
+<form action="{{url_for('solution')}}">
+    <label for "com">Type Something..</label>
+    <input type="text"  name="command" id="com">
+    <input type="submit" name="submit">
+</form>
+</body>
+</html>
