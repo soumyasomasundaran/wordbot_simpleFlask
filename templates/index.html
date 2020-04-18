@@ -1,17 +1,35 @@
+<!--Index.html
+Displays the main page
+/-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Simple Wordbot</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+    <script src="{{ url_for('static', filename='js/form.js') }}"></script>
+
+
 </head>
 <body>
-<p>Hello Welcome to the wordbot!! Type any of the following commands:</p>
-<p>/hello<br>/bye<br>/meaning [word]<br>/synonym [word]<br>/antonym [word] <br><p>
-<p>Lets give t a try<br>Serendipity<br>the occurrence and development of events by chance in a happy or beneficial way<p>
-<form action="{{url_for('solution')}}">
-    <label for "com">Type Something..</label>
-    <input type="text"  name="command" id="com">
+<h1>Hello Welcome to the word bot!!</h1>
+<div id="instruction">
+<h2>Type any of the following commands:</h2>
+<p>hello<br>bye<br>meaning [word]<br>synonym [word]<br>antonym [word] <br><p>
+<p></p><br>Example:meaning oxymoron<br><p>
+    </div>
+<form id ="user_form">
+    <label for ="command">Enter</label>
+    <input type="text"  name="command" id="command">
     <input type="submit" name="submit">
 </form>
+
+<div id="successAlert" class="alert alert-success" role="alert" style="display:none;"></div>
+	<div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
 </body>
 </html>

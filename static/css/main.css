@@ -1,0 +1,20 @@
+h1{
+color:;
+align:center
+}
+
+body {
+  margin:0;
+  padding:0
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#444;
+  text-align:center
+}
+#successAlert,#errorAlert{
+margin:100px;
+}
+#instruction{
+margin:30px;
+padding:10px;
+background-color:#E5E2EB
+}
